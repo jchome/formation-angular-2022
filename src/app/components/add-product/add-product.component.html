@@ -1,0 +1,61 @@
+<div class="container">
+  <h1>Add a product</h1>
+  
+  <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+    <div class="mb-3">
+      <label for="inputTitle" class="form-label">Title</label>
+      <input type="text" class="form-control" [class.is-invalid]="errors['inputTitle']" name="inputTitle" id="inputTitle" required ngModel>
+      <div *ngIf="errors['inputTitle']" id="validationTitleFeedback" class="invalid-feedback">
+        {{ errors["inputTitle"] }}
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="inputAvailability" name="inputAvailability" ngModel>
+      <label class="form-check-label" for="inputAvailability">Available</label>
+    </div>
+
+    <div class="mb-3">
+      <label for="inputTitle" class="form-label">Price</label>
+      <input type="text" class="form-control" [class.is-invalid]="errors['inputPrice']" name="inputPrice" id="inputPrice" required ngModel>
+      <div *ngIf="errors['inputPrice']" id="validationPriceFeedback" class="invalid-feedback">
+        {{ errors["inputPrice"] }}
+      </div>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="inputTitle" class="form-label">Photo</label>
+      <input type="text" class="form-control" [class.is-invalid]="errors['inputPhoto']" name="inputPhoto" id="inputPhoto" ngModel>
+      <div *ngIf="errors['inputPhoto']" id="validationPhotoFeedback" class="invalid-feedback">
+        {{ errors["inputPhoto"] }}
+      </div>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="inputCategory" class="form-label">Category</label>
+      <input type="text" class="form-control" [class.is-invalid]="errors['inputCategory']" name="inputCategory" id="inputCategory" ngModel>
+      <div *ngIf="errors['inputCategory']" id="validationCategoryFeedback" class="invalid-feedback">
+        {{ errors["inputCategory"] }}
+      </div>
+    </div>
+
+
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Description" id="inputDescription" name="inputDescription"
+        style="height: 100px" ngModel></textarea>
+      <label for="inputDescription">Description</label>
+    </div>
+    <hr>
+    <div class="d-flex bd-highlight mb-3">
+      <div class="p-2 bd-highlight">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="ms-auto p-2 bd-highlight">
+        <a routerLink="/" class="btn btn-sm btn-outline-primary">Back to all products</a>
+      </div>
+    </div>
+
+  </form>
+</div>

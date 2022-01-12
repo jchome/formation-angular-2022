@@ -1,0 +1,193 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Mouse",
+      "photos": [
+        "https://iconarchive.com/download/i80311/jonathan-rey/devices-printers/Mouse-Microsoft-Basic-Optical-v2.0.ico",
+        "https://ui.assets-asda.com/dm/asdagroceries/T_5054781872139_T1?defaultImage=asdagroceries/noImage&resMode=sharp2&id=IuRSV3&fmt=jpg&dpr=off&fit=constrain,1&wid=256&hei=256"
+      ],
+      "availability": true,
+      "price": "10",
+      "description": "Funny mouse for Chirstmas. <br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "computer"
+    },
+    {
+      "id": 2,
+      "title": "Keyboard",
+      "photos": [
+        "https://accessolutions.fr/web/image/product.template/32/image_256/Clavier%20gros%20caract%C3%A8res%20grav%C3%A9es%20VIG%20KEYS?unique=9bef17b",
+        "https://accessolutions.fr/web/image/product.template/1379/image_256/Clavier%20XL%20Print%20gros%20caract%C3%A8res%20r%C3%A9tro%C3%A9clair%C3%A9%20fond%20noir%20PC%20ou%20MAC?unique=e1617ee"
+      ],
+      "availability": true,
+      "price": 15.5,
+      "description": "Funny keyboard for Chirstmas <br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "computer"
+    },
+    {
+      "id": 3,
+      "title": "HD Monitor",
+      "photos": [
+        "https://www.blitzmicro.eu/11834-medium_default/MI-MBP16-IVAG.jpg",
+        "https://m.media-amazon.com/images/I/81dwBibLlYL._CR204,0,1224,1224_UX256.jpg",
+        "https://winaero.com/blog/wp-content/uploads/2013/10/MainIcon.png",
+        "https://m.media-amazon.com/images/I/71BMP00ULjL._CR0,0,1414,1414_UX256.jpg"
+      ],
+      "availability": true,
+      "price": 59.98,
+      "description": "Very hight quality monitor <br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "computer"
+    },
+    {
+      "id": 4,
+      "title": "Speed Triple",
+      "photos": [
+        "https://www.ridersline.com.au/shop/3608-atmn_list/kriega-us-drypack-fit-kit-for-triumph-street-triple.jpg",
+        "https://www.yksmotasu.com/image/yksmotasu/image/cache/data/3D%20Triumpth%20motor/2021-Triumph-Speed-Triple-1200RS-static-1-630x417-256x256.jpg",
+        "https://i2.wp.com/www.mk1speedtriple.co.uk/wp-content/uploads/THUMB-Featured-Owners-Gripperod-5.jpg?resize=256%2C256"
+      ],
+      "availability": false,
+      "price": 15000,
+      "description": "La Triumph Speed Triple est un roadster construit par la firme britannique Triumph. <br/> La première Speed Triple voit le jour pour le salon de Cologne de 1993.",
+      "category": "garage"
+    },
+    {
+      "id": 5,
+      "title": "Bonneville T100",
+      "photos": [
+        "https://ubisoft-avatars.akamaized.net/e30b8a90-2aab-416b-98a2-63691480722e/default_256_256.png",
+        "https://saddlemen.com/image/cache//catalog/data/product/T01-01-0923-256x256.jpg",
+        "https://cdn106.picsart.com/204757911004201.jpg?type=webp&to=crop&r=256"
+      ],
+      "availability": true,
+      "price": 6800,
+      "description": "La Bonneville T100 est une moto conçue et construite par Triumph Motorcycles Ltd à Hinckley, Leicestershire, au Royaume-Uni.",
+      "category": "garage"
+    },
+    {
+      "id": 6,
+      "title": "Triumph spitfire",
+      "photos": [
+        "http://idata.over-blog.com/3/08/29/55/2-roues-12-juillet-09/LOGO-ET-AFFICHE/telechargement--2-.jpg",
+        "http://idata.over-blog.com/3/08/29/55/10-du-16-ao-t-RV-de-LA-REINE/1-BIS/klm/jj/telechargement--7-.jpg"
+      ],
+      "availability": true,
+      "price": 58000,
+      "description": "La Triumph Spitfire est une automobile de type roadster à deux places et moteur 4 cylindres en ligne, construite de 1962 à 1980 par le constructeur automobile britannique Triumph, conçue par Harry Webster, et munie d’une carrosserie dessinée par Giovanni Michelotti.",
+      "category": "garage"
+    },
+    {
+      "id": 7,
+      "title": "Wrench",
+      "photos": [
+        "https://findicons.com/files/icons/589/gear/256/adjustable_wrench.png"
+      ],
+      "availability": true,
+      "price": 12.25,
+      "description": "",
+      "category": "garage"
+    },
+    {
+      "id": 8,
+      "title": "Screwdriver",
+      "photos": [
+        "https://cdn.manomano.com/external-resources/AAHKMJXYDAFdJAOAIMEbOAch8oevOFnH3S5T9NRevmE_GHLjZc6LP4C4HoPHiCuqb0updtqMrA9fXVYr6LN-p2KbGuFwmpUpaPumm-90cOjB6dr75fWTo9Z11d3pFhK6Ic58OdTiEOFiW6Tw2PS2U3FYDvbe19B8n4_aQaBAuQhPJhJWdC1xWLKu-2043ulpNlE="
+      ],
+      "availability": true,
+      "price": 18.35,
+      "description": "",
+      "category": "garage"
+    },
+    {
+      "id": 9,
+      "title": "Tire",
+      "photos": [
+        "https://www.e-pneu.ch/assets/epneu/wheels-48cb317bcfef626cb22a9f2402bc64263b3aff0ea877afa6831709d91a1d1f34.png"
+      ],
+      "availability": true,
+      "price": 98.55,
+      "description": "",
+      "category": "garage"
+    },
+    {
+      "id": 10,
+      "title": "Virtual Reality Bril",
+      "photos": [
+        "https://www.pascogifts.com/fr/media/cache/resolve/square/files/1220-foto-1-kunststof-virtual-reality-bril-low-resolution-5812084d9f48b.jpg",
+        "https://static-pepper.dealabs.com/threads/raw/default/2143591_2/re/300x300/qt/60/2143591_2.jpg"
+      ],
+      "availability": true,
+      "price": 12.25,
+      "description": "",
+      "category": "computer"
+    },
+    {
+      "id": 11,
+      "title": "e-glasses",
+      "photos": [
+        "https://images.confortetvie.fr/Produits/256/5690128_WEB1.jpg",
+        "https://www.pascogifts.com/fr/media/cache/resolve/square/files/10044203-pp-y1-5877f211a9421.jpg"
+      ],
+      "availability": true,
+      "price": 84,
+      "description": "",
+      "category": "computer"
+    },
+    {
+      "id": 13,
+      "title": "Moto helmet",
+      "photos": [
+        "https://www.motoservices.com/accessoire-moto-equipement-moto/photos/b_airoh-mathisse-rs-noir-sp.jpg",
+        "https://www.motoservices.com/accessoire-moto-equipement-moto/photos/pres_Casque-integral-Dexter.jpg"
+      ],
+      "availability": true,
+      "price": 140,
+      "description": "",
+      "category": "garage"
+    },
+    {
+      "title": "Vintage cell phone",
+      "availability": true,
+      "price": "555",
+      "category": "garage",
+      "description": "",
+      "photos": [
+        "https://www.bricovis.fr/api/categories/q13BoC0tR49PzF792wlLexgatA4mg4hKPuwO9Js3-256x256.jpg"
+      ],
+      "id": 14
+    },
+    {
+      "title": "Vintage cell phone",
+      "availability": true,
+      "price": "56.12",
+      "category": "computer",
+      "description": "",
+      "photos": [
+        "https://p5.storage.canalblog.com/52/73/117528/60545641.jpg"
+      ],
+      "id": 15
+    },
+    {
+      "title": "aaa",
+      "availability": true,
+      "price": "555",
+      "category": "",
+      "description": "",
+      "photos": [
+        "https://driveimg4.intermarche.com/fr/Ressources/Images/produit/zoom/84A8DBFBF0A4A347015DD9F83D5CD369.jpg"
+      ],
+      "id": 16
+    },
+    {
+      "title": "Old phone",
+      "availability": true,
+      "price": "23.55",
+      "category": "computer",
+      "description": "",
+      "photos": [
+        "https://p5.storage.canalblog.com/52/73/117528/60545641.jpg"
+      ],
+      "id": 17
+    }
+  ]
+}

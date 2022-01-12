@@ -1,0 +1,118 @@
+<div>
+    <span>
+        <h1>Welcome in Ma-Boutique</h1>
+    </span>
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="input-group flex-nowrap" role="group">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" (input)="onSearchChange($event.target)"
+                aria-describedby="addon-wrapping">
+            </div>
+        </div>
+
+        <div class="col-1">&nbsp;</div>
+
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            <button (click)="filterCategory('')" class="btn btn-sm btn-outline-primary"
+                [ngClass]="(currentFilter === '')?('btn-info'):('')">all products</button>
+            <button (click)="filterCategory('computer')" class="btn btn-sm btn-outline-primary"
+                [ngClass]="(currentFilter === 'computer')?('btn-info'):('')">
+                Only computer <span *ngIf="currentFilter === 'computer'">({{ totalNbOfProducts }})</span>
+            </button>
+            <button (click)="filterCategory('garage')" class="btn btn-sm btn-outline-primary"
+                [ngClass]="(currentFilter === 'garage')?('btn-info'):('')">
+                Only Garage <span *ngIf="currentFilter === 'garage'">({{ totalNbOfProducts }})</span>
+            </button>
+        </div>
+        <div class="col-1">&nbsp;</div>
+        <div class="col-2" role="group" aria-label="Second group">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon">€</span>
+                <input type="text" class="form-control" [(ngModel)]="priceMin" (input)="getProducts()"/>
+                
+                <input type="text" class="form-control" [(ngModel)]="priceMax" (input)="getProducts()" aria-describedby="basic-addon"/>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-5 mb-3 text-center">
+    <!-- <div *ngFor="let product of products | categoryFilter: currentFilter" class="col"> -->
+    <div *ngFor="let product of products" class="col">
+        <div class="card mb-3 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal"> {{ product.title }}</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">{{ product.price | currency:'EUR' }} <small
+                        class="text-muted fw-light">
+                        <i *ngIf="userIsConnected()" class="fa" [ngClass]="{
+                            'fa-exclamation-triangle': !product.availability,
+                            'fa-cubes': product.availability
+                         }" title="{{ product.availability?'In stock':'Not available' }}"></i>
+                        <!-- button class="w-10 btn btn-sm btn-outline-primary" *ngIf="!product.availability"
+                            (click)="setAvailable(product.id)" style="margin-left:10px;">
+                            <i class="fas fa-truck"></i>
+                            Add in stock
+                        </button -->
+                    </small>
+                </h1>
+                <p class="mt-3 mb-4" style="text-align: left; font-size: 12px;" [innerHtml]="product.description">
+                </p>
+
+                <carousel [cellsToShow]="1">
+                    <div class="carousel-cell" *ngFor="let src of product.photos">
+                        <img src="{{src}}">
+                    </div>
+                </carousel>
+
+                <a class="w-100 btn btn-lg btn-primary" [routerLink]="['/product/', product.id]">
+                    <i class="fas fa-info-circle"></i>
+                    Details
+                </a>
+                <br />
+                <br />
+                <button *ngIf="product.availability" type="button" class="w-40 btn btn-lg btn-outline-primary">
+                    <i class="fas fa-cart-plus"></i>
+                    Add to card
+                </button>
+                &nbsp; &nbsp;
+                <button *ngIf="product.availability && userIsConnected()" type="button" class="w-40 btn btn-lg btn-outline-primary">
+                    <i class="fas fa-money-bill-wave"></i>
+                    Buy now
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+                <a class="page-link" href="#" aria-label="Previous" (click)="previousPage()">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <li *ngFor="let item of [].constructor(totalNbOfPages); let i = index" class="page-item"
+                [class.active]="currentPage === (i+1)"><a class="page-link" href="#" (click)="gotoPage(i+1)">{{i +
+                    1}}</a>
+            </li>
+
+            <li class="page-item" [class.disabled]="products?.length < pageSize">
+                <a class="page-link" href="#" aria-label="Next" (click)="nextPage()">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

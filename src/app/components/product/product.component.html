@@ -1,0 +1,59 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">{{ product?.title }}</h1>
+            <p class="lead text-muted" [innerHtml]="product.description"></p>
+            <p>Category: <span class="badge bg-success">{{ product.category }}</span></p>
+
+            <h1>Our best price: <span class="badge bg-secondary" class="btn btn-primary position-relative">
+                    {{ product.price | currency:'EUR' }}
+                    <!--span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span class="visually-hidden">
+                    </span>
+                </span-->
+                </span>
+
+            </h1>
+
+            <hr />
+
+            <button *ngIf="product.availability && userConnected" type="button" class="w-40 btn btn-lg btn-primary">
+                <i class="fas fa-cart-plus"></i>
+                Add to card
+            </button>
+            &nbsp; &nbsp;
+            <button *ngIf="product.availability && userConnected" type="button" class="w-40 btn btn-lg btn-outline-primary">
+                <i class="fas fa-money-bill-wave"></i>
+                Buy now
+            </button>
+
+            <div *ngIf="!product.availability && userConnected" class="alert alert-danger" role="alert">
+
+                <i class="fa" [ngClass]="{
+                        'fa-exclamation-triangle': !product.availability,
+                        'fa-cubes': product.availability
+                        }" title="In stock: {{ product.availability }}"></i>
+
+                This product is not available
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let src of product.photos">
+                <div class="card shadow-sm">
+                    <img src="{{src}}">
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
